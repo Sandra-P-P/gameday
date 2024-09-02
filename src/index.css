@@ -1,8 +1,22 @@
+:root {
+  --non-salt-gradient-std: linear-gradient(
+    180deg,
+    var(--salt-color-indigo-800) 0%,
+    var(--salt-color-indigo-900) 100%
+  );
+}
+
 * {
   box-sizing: border-box;
 }
 
 html,
 body {
+  color: var(--salt-color-white);
   background-color: var(--salt-color-slate-900);
+}
+
+div.saltScrim {
+  background-color: #00000080;
+  backdrop-filter: blur(10px);
 }
