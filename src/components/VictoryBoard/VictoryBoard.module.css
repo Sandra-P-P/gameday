@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  position: relative;
+}
+
+.dialog {
+  background: var(--non-salt-gradient-std);
+  min-width: 90%;
+  max-height: 100%;
+}
+
+.dialogContent {
+  color: var(--salt-color-white);
+  background: none;
+}
+
+.heroImg {
+  max-width: 650px;
+}
