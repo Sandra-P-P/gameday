@@ -12,7 +12,7 @@
   },
   "lint-staged": {
     "*": "prettier --ignore-unknown --write",
-    "*.js": "eslint --fix",
+    "*.{js,jsx}": "eslint --fix",
     "*.css": "stylelint"
   },
   "dependencies": {
@@ -36,6 +36,8 @@
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
     "prettier": "3.3.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
     "vite": "^5.4.1"
   }
 }
