@@ -14,6 +14,7 @@ html,
 body {
   color: var(--salt-color-white);
   background-color: var(--salt-color-slate-900);
+  max-height: 100vh;
 }
 
 div.saltScrim {

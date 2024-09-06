@@ -12,6 +12,10 @@ function App() {
   const onOpenChange = (value) => {
     setOpen(value);
   };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <>
       <div className={styles.App}>
@@ -20,7 +24,11 @@ function App() {
           {" "}
           Click me
         </Button>
-        <VictoryBoard open={open} onOpenChange={onOpenChange}></VictoryBoard>
+        <VictoryBoard
+          open={open}
+          onOpenChange={onOpenChange}
+          handleClose={handleClose}
+        ></VictoryBoard>
       </div>
     </>
   );

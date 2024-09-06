@@ -4,6 +4,7 @@ import victory from "../../assets/victory.svg";
 import firstRibbon from "../../icons/first-ribbon.svg";
 import secondRibbon from "../../icons/second-ribbon.svg";
 import thirdRibbon from "../../icons/third-ribbon.svg";
+import { CloseIcon } from "@salt-ds/icons";
 
 const VictoryBoard = (props) => {
   return (
@@ -13,6 +14,7 @@ const VictoryBoard = (props) => {
       id={useId()}
       className={styles.dialog}
     >
+      <CloseIcon onClick={props.handleClose} />
       <DialogContent className={styles.dialogContent}>
         <div className={styles.container}>
           <div>
@@ -24,18 +26,17 @@ const VictoryBoard = (props) => {
             </p>
             <ul>
               <li>
-                {" "}
-                <img src={firstRibbon} alt="" /> 1st place
+                <img src={firstRibbon} alt="" /> Team Lorem ipsum 1
               </li>
 
               <li>
                 <img src={secondRibbon} alt="" />
-                2nd place
+                Team Lorem ipsum 2
               </li>
 
               <li>
                 <img src={thirdRibbon} alt="" />
-                3rd place
+                Team Lorem ipsum 3
               </li>
             </ul>
           </div>
