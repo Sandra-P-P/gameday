@@ -12,15 +12,24 @@ function App() {
   const onOpenChange = (value) => {
     setOpen(value);
   };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <>
+      <header>Amazon Gameday</header>
       <div className={styles.App}>
         <h1>Heading</h1>
         <Button variant="cta" onClick={handleRequestOpen}>
           {" "}
           Click me
         </Button>
-        <VictoryBoard open={open} onOpenChange={onOpenChange}></VictoryBoard>
+        <VictoryBoard
+          open={open}
+          onOpenChange={onOpenChange}
+          handleClose={handleClose}
+        ></VictoryBoard>
       </div>
     </>
   );

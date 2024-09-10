@@ -3,10 +3,22 @@
   position: relative;
 }
 
+.container > div:first-child {
+  padding: 3em;
+}
+
+.container > div:last-child {
+  min-width: 60%;
+  position: relative;
+  overflow: hidden;
+}
+
 .dialog {
   background: var(--non-salt-gradient-std);
   min-width: 90%;
   max-height: 100%;
+  padding: 0;
+  border: 0;
 }
 
 .dialogContent {
@@ -15,5 +27,91 @@
 }
 
 .heroImg {
-  max-width: 650px;
+  bottom: -10px;
+  right: 0;
+  position: absolute;
+  animation: fadeIn 1s;
+}
+
+.dialogContent ul {
+  list-style: none;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.dialogContent li {
+  display: flex;
+  line-height: 100%;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-left: -10px;
+  opacity: 0;
+  animation: move-left 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.dialogContent li:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.dialogContent li:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.dialogContent li:last-child {
+  margin-bottom: 0;
+}
+
+.dialogContent li img {
+  margin-right: 0.5em;
+}
+
+.dialogContent p {
+  font-size: 15px;
+  color: var(--salt-color-smoke-200);
+  font-weight: 300;
+  margin-bottom: 3em;
+}
+
+.dialogContent h1 {
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  animation: fade-in 1s;
+}
+
+.dialog > svg {
+  fill: var(--salt-color-smoke-400);
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.dialog > svg:hover {
+  fill: var(--salt-color-smoke-200);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes move-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
