@@ -5,6 +5,7 @@ import firstRibbon from "../../icons/first-ribbon.svg";
 import secondRibbon from "../../icons/second-ribbon.svg";
 import thirdRibbon from "../../icons/third-ribbon.svg";
 import { CloseIcon } from "@salt-ds/icons";
+import Popper from "../Popper/Popper";
 
 const VictoryBoard = (props) => {
   return (
@@ -14,6 +15,7 @@ const VictoryBoard = (props) => {
       id={useId()}
       className={styles.dialog}
     >
+      <Popper />
       <CloseIcon onClick={props.handleClose} />
       <DialogContent className={styles.dialogContent}>
         <div className={styles.container}>

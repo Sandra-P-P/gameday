@@ -18,6 +18,7 @@ function App() {
   };
   return (
     <>
+      <header>Amazon Gameday</header>
       <div className={styles.App}>
         <h1>Heading</h1>
         <Button variant="cta" onClick={handleRequestOpen}>
