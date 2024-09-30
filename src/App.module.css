@@ -1,3 +1,13 @@
-.App h1 {
-  color: white;
+.header {
+  background-color: var(--salt-color-slate-900);
+  padding: 0.5em 2em;
+  box-shadow: var(--salt-shadow-300);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.App {
+  padding: 0 2em;
 }

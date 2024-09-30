@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    var(--salt-color-cider-500) 0%,
+    var(--salt-color-autumn-600) 100%
+  ) !important;
+}
+
+.container > div:first-child {
+  margin-left: 2em;
+}
+
+.container > div:first-child > h2 {
+  font-size: 24px;
+}
+
+.container > div:first-child > p {
+  color: var(--salt-color-smoke-200);
+  font-size: 12px;
+  line-height: 136%;
+}
+
+.container > div:first-child > button {
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--salt-color-white);
+  background-color: var(--salt-color-jade-500);
+  padding: 0.8em 2em;
+  display: flex;
+  align-items: center;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.container > div:first-child > button:hover {
+  box-shadow: var(--salt-shadow-400);
+}
+
+.container > div:first-child > button > svg {
+  margin-left: 5px;
+}

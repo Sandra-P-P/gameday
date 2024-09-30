@@ -15,9 +15,78 @@ body {
   color: var(--salt-color-white);
   background-color: var(--salt-color-slate-900);
   max-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 div.saltScrim {
   background-color: #00000080;
   backdrop-filter: blur(10px);
+}
+
+.dashboard-parent-container {
+  padding-bottom: 2em;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 0.5fr 0.6fr;
+  grid-template-rows: 1fr 1.6fr;
+  grid-auto-columns: 1fr;
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "general-info events timer timer"
+    "teams scorecard scorecard leadership";
+}
+
+.dashboard-parent-container > .general-info {
+  grid-area: general-info;
+  margin-top: 5em;
+}
+
+.dashboard-parent-container > .events {
+  grid-area: events;
+  margin-top: 5em;
+}
+
+.dashboard-parent-container > .timer {
+  grid-area: timer;
+  position: relative;
+  z-index: 2;
+  border-radius: 0 0 20px 20px;
+}
+
+.dashboard-parent-container > .teams {
+  grid-area: teams;
+}
+
+.dashboard-parent-container > .scorecard {
+  grid-area: scorecard;
+}
+
+.dashboard-parent-container > .leadership {
+  grid-area: leadership;
+}
+
+.dashboard-parent-container > div {
+  background: var(--non-salt-gradient-std);
+  border-radius: 20px;
+  box-shadow: var(--salt-shadow-400);
+  padding: 2em 1em;
+  color: var(--salt-color-indigo-100);
+}
+
+.custom-btn {
+  color: var(--salt-color-violet-200);
+  padding: 1em 2em;
+  background: var(--non-salt-gradient-std);
+  box-shadow: var(--salt-shadow-400);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-btn:hover {
+  color: var(--salt-color-violet-100);
+  box-shadow: var(--salt-shadow-500);
 }
