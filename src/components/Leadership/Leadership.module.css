@@ -1,0 +1,20 @@
+.heading {
+  font-size: 24px;
+}
+
+.resultsBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2em 1em;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  width: 100%;
+  border: 1px solid var(--salt-color-indigo-900);
+}
+
+.resultsBtn > svg {
+  margin-left: 5px;
+}

@@ -1,35 +1,28 @@
-import { Button } from "@salt-ds/core";
-import VictoryBoard from "./components/VictoryBoard/VictoryBoard";
 import styles from "./App.module.css";
-import { useState } from "react";
+import Leadership from "./components/Leadership/Leadership";
+import Timer from "./components/Timer/Timer";
 
 function App() {
-  const [open, setOpen] = useState(false);
-  const handleRequestOpen = () => {
-    setOpen(true);
-  };
-
-  const onOpenChange = (value) => {
-    setOpen(value);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
   return (
     <>
-      <header>Amazon Gameday</header>
+      <header className={styles.header}>
+        <strong>Amazon</strong> Gameday
+      </header>
       <div className={styles.App}>
-        <h1>Heading</h1>
-        <Button variant="cta" onClick={handleRequestOpen}>
-          {" "}
-          Click me
-        </Button>
-        <VictoryBoard
-          open={open}
-          onOpenChange={onOpenChange}
-          handleClose={handleClose}
-        ></VictoryBoard>
+        <div className="dashboard-parent-container">
+          <div className="general-info"></div>
+          <div className="events">
+            <h2>Events</h2>
+          </div>
+          <Timer />
+          <div className="teams">
+            <h2>Teams</h2>
+          </div>
+          <div className="scorecard">
+            <h2>Scorecard</h2>
+          </div>
+          <Leadership />
+        </div>
       </div>
     </>
   );

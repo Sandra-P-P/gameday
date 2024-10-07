@@ -1,0 +1,136 @@
+.container {
+  width: 100%;
+  max-height: 100%;
+  aspect-ratio: 1/1;
+  max-width: 250px;
+  background: linear-gradient(
+    180deg,
+    var(--salt-color-smoke-100) 0%,
+    var(--salt-color-smoke-200) 100%
+  ) !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--salt-color-indigo-900);
+  border: 4px solid var(--salt-color-smoke-500);
+  box-sizing: border-box;
+  box-shadow: var(--salt-shadow-400);
+  position: relative;
+  transition: 0.5s all ease-in-out;
+}
+
+.spock {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  transition: 0.5s all ease-in-out;
+}
+
+.clockInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+}
+
+.clockStatus {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 1em;
+}
+
+.clockStatus svg {
+  margin-right: 0.5em;
+}
+
+.clockTime {
+  display: flex;
+}
+
+.clockTime > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.active .startWheel > span {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: inline-block;
+  background: linear-gradient(
+    0deg,
+    var(--salt-color-smoke-100) 33%,
+    var(--salt-color-indigo-500) 100%
+  );
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.clockTime > div > span:first-child {
+  font-size: 40px;
+  margin-bottom: 0.2em;
+}
+
+.clockTime > div > span:last-child {
+  font-size: 10px;
+  color: var(--salt-color-indigo-800);
+  margin-left: 6px;
+}
+
+.active {
+  box-shadow: var(--salt-shadow-100);
+}
+
+.active .spock {
+  transform: scale(1.07);
+}
+
+.startWheel {
+  opacity: 0;
+  background-color: var(--salt-color-smoke-100);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  transition: all 0.5s ease-in;
+}
+
+.active .startWheel {
+  opacity: 1;
+  box-shadow: var(--salt-shadow-400);
+  transform: scale(0.85);
+}
+
+.active .startWheel > span::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 98%;
+  border-radius: 50%;
+  background: var(--salt-color-smoke-100);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
