@@ -11,10 +11,16 @@ function App() {
       <div className={styles.App}>
         <div className="dashboard-parent-container">
           <div className="general-info"></div>
-          <div className="events"></div>
+          <div className="events">
+            <h2>Events</h2>
+          </div>
           <Timer />
-          <div className="teams"></div>
-          <div className="scorecard"></div>
+          <div className="teams">
+            <h2>Teams</h2>
+          </div>
+          <div className="scorecard">
+            <h2>Scorecard</h2>
+          </div>
           <Leadership />
         </div>
       </div>
